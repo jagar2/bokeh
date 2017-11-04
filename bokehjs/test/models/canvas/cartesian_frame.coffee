@@ -29,12 +29,6 @@ describe "CartesianFrame", ->
     expect(c.xscales.default).to.not.be.undefined
     expect(c.yscales.default).to.not.be.undefined
 
-  it "should report deprecated *_mappers", ->
-    c = new CartesianFrame({x_range: Range1d(0, 1), y_range: Range1d(0, 1), x_scale: new LinearScale(), y_scale: new LinearScale()})
-
-    expect(c.x_mappers).to.be.deep.equal c.xscales
-    expect(c.y_mappers).to.be.deep.equal c.yscales
-
   describe "_get_scales method", ->
 
     beforeEach ->
